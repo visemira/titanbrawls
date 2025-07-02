@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>Titan Brawls</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="visemire" >
+   <meta name="keyword" content="Hero Wars, Titan Brawl, Defeat Titan Team, Search, Titan Team">
+   <meta name="description" content="Search for the Titan Team to Defeat the challenging Titan Team. Find out what Team can defeat what team.">
+  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="select-none">
+   <div id="app" 
+      class="p-6">
+      <!-- Select Team Button -->
+      <div 
+         class="
+            w-full 
+            flex  
+            justify-center 
+            fixed 
+            bottom-1">
+         <div 
+            class="
+               bg-black 
+               flex items-center 
+               rounded-full">
+            <span 
+               class="
+                  ml-1 
+                  p-2 
+                  bg-green-500 
+                  rounded-l-full 
+                  uppercase">
+               Select
+            </span>
+            <button
+            @click="openTeamDialog"
+            class=" text-white bg-green-500 rounded-md hover:bg-green-600"
+            >
+               <span >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+               </span>
+            </button>
+            <span class=" mr-1 p-2 bg-green-500 rounded-r-full uppercase">
+               Team
+            </span>
+         </div>
+      
+      </div>
+      <!-- END OF Select Team Button -->
+
+
+      <!-- Dialog Modal for Selecting Team with Image and Details (Full Screen) -->
+      <div v-if="showTeamDialog" 
+         class="
+            fixed 
+            inset-0
+            top-0
+            z-50
+            flex 
+            items-center 
+            justify-center 
+            bg-gray-800 
+            bg-opacity-75">
+         <div 
+            class="
+               bg-white 
+               rounded-lg 
+               w-full 
+               h-full 
+               max-w-none 
+               overflow-y-auto 
+               flex 
+               flex-col">
+            <div 
+               class="
+                  flex 
+                  justify-center 
+                  bg-gray-300">
+               <h2 
+                  class="
+                     text-xl
+                     p-2 
+                     font-bold">
+                  Select Titans for Your Team
+               </h2>
+            </div>
+            <!-- Scrollable Titan List -->
+            <div 
+               class="
+                  grow 
+                  grid 
+                  p-4
+                  grid-cols-3 
+                  lg:grid-cols-4 
+                  overflow-y-auto 
+                  flex-1"> 
+               <div
+                  v-for="titan in titans"
+                  :key="titan.name"
+                  class="
+                     group 
+                     relative
+                     p-4 
+                     border 
+                     mx-2
+                     my-2
+                     shadow 
+                     rounded-full 
+                     hover:shadow-lg 
+                     transition 
+                     cursor-pointer"
+                  :class="{'bg-green-100': selectedTeam.includes(titan)}"
+                  @click="toggleSelection(titan)">
+
+                  <img 
+                     :src="titan.image_location" 
+                     :alt="titan.name" 
+                     class="
+                        relative 
+                        w-auto
+                        h-60
+                        object-cover
+                        mx-auto 
+                        mb-2 " />
+                        <!-- This div will be hidden by default and shown when hovered -->
+                  <div>
+
+                  </div>
+                     <div 
+                        class="
+                           absolute 
+                           bottom-0
+                           left-0
+                           w-full
+                           opacity-0 
+                           h-1/2 
+                           group-hover:opacity-100 
+                           bg-gray-300 
+                           rounded-b-full
+                           bg-opacity-75 ">
+                        <p class="
+                           uppercase
+                           text-center 
+                           underline
+                           lg:text-xl
+                           text-sm 
+                           font-bold">{{ titan.name }}</p>
+                        <p class="capitalize text-center lg:text-base text-sm text-gray-800">{{ titan.title }}</p>
+                        <p class="capitalize text-center text-sm">Role: <span class="font-bold">{{ titan.main_role }}</span></p>
+                        <p class="capitalize text-center text-sm">fight at: <span class="font-bold">{{ titan.fights_at}}</span></p>
+                        <p class="capitalize text-center text-sm" v-if="titan.additional_role !== 'none'">Add: <span class="font-bold">{{ titan.additional_role }}</span></p>
+                     </div>
+               </div>
+            </div>
+            <!-- Scrollable Titan List -->
+
+            <!-- Confirm -->
+            <div>
+               <div class="fixed bottom-4 right-8">
+                  <button @click="confirmTeam" 
+                     class="
+                        px-6 
+                        py-2 
+                        text-white 
+                        bg-blue-500 
+                        rounded-full 
+                        hover:bg-blue-600">
+                     Confirm
+                  </button>
+               </div>
+            </div>        
+         </div>
+      </div>
+
+      <!-- Display Blank Cards with Selected Team -->
+      <div class="grid grid-cols-5 lg:gap-4 gap-1 mt-6">
+         <div v-for="(card, index) in blankCards" :key="index" class="lg:p-4 border rounded-md">
+            <div v-if="card" class="relative select-none pb-4">
+               <!-- Mobile View -->
+               <div class="block lg:hidden">
+                  <img :src="card.avatar_location" :alt="card.name" class="object-cover rounded-full h-auto w-full">
+                  <div class="absolute w-full bg-gray-300 rounded shadow-lg text-center">
+                     <h2 class="capitalize text-sm ">{{ card.name }}</h2>
+                  </div>
+                  <span class="
+                     bg-opacity-75 
+                     absolute
+                     bg-gray-300
+                     hover:bg-pink-300 
+                     rounded-full
+                     top-0 
+                     right-0 
+                     "
+                     @click="removeFromBlankCard(index)">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red"
+                     class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                      </svg>
+                  </span>
+               </div>
+               <!-- Desktop View -->
+               <div class="hidden lg:block">
+                  <img :src="card.image_location" :alt="card.name" class="object-cover w-auto xl:h-60 lg:h-32 mx-auto pb-6">
+                  <div class="absolute w-full bg-gray-300 p-2 rounded shadow-lg text-center">
+                     <h2 class="uppercase xl:text-base lg:text-sm font-bold">{{ card.name }}</h2>
+                  </div>
+                  <span class="
+                     bg-opacity-75 
+                     absolute
+                     bg-gray-300
+                     hover:bg-pink-300 
+                     rounded-full
+                     top-0 
+                     right-0 
+                     "
+                     @click="removeFromBlankCard(index)">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red"
+                     class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                      </svg>
+                  </span>
+               </div>
+            </div>
+            <div v-else class="relative select-none pb-4">
+               <!-- Titan Data -->
+               <!-- Mobile View -->
+               <div class="block lg:hidden">
+                  <img :src="titans[index].avatar_location" :alt="titans[index].name" class="object-cover rounded-full h-auto w-full">
+                  <div class="absolute w-full bg-gray-300 rounded shadow-lg text-center">
+                     <h2 class="capitalize text-sm ">{{ titans[index].name }}</h2>
+                  </div>
+                  <span class="
+                     bg-opacity-75 
+                     absolute
+                     bg-gray-300
+                     hover:bg-pink-300 
+                     rounded-full
+                     top-0 
+                     right-0 
+                     "
+                     @click="removeFromBlankCard(index)">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red"
+                     class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                      </svg>
+                  </span>
+               </div>
+               <!-- Desktop View -->
+               <div class="hidden lg:block">
+                  <img :src="titans[index].image_location" :alt="titans[index].name" class="object-cover w-auto xl:h-60 lg:h-32 mx-auto pb-6">
+                  <div class="absolute w-full bg-gray-300 p-2 rounded shadow-lg text-center">
+                     <h2 class="uppercase xl:text-base lg:text-sm font-bold">{{ titans[index].name }}</h2>
+                  </div>
+                  <span class="
+                     bg-opacity-75 
+                     absolute
+                     bg-gray-300
+                     hover:bg-pink-300 
+                     rounded-full
+                     top-0 
+                     right-0 
+                     "
+                     @click="removeFromBlankCard(index)">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red"
+                     class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                      </svg>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Winning Team Section -->
+      <div v-if="winningTeam.length > 0" class="mt-6">
+         <h2 class="text-xl font-bold">Winning Team:</h2>
+         <!-- List of all winning team -->
+         <div>
+            <ul>
+               <li v-for="titan in winningTeam" :key="titan.name">{{ titan.name }} - {{ titan.titan_class }}</li>
+            </ul>
+            <!-- Mobile View -->
+            <!-- <div class="block lg:hidden">
+               <img :src="card.avatar_location" :alt="card.name" class="object-cover rounded-full h-auto w-full">
+               <div class="absolute w-full bg-gray-300 rounded shadow-lg text-center">
+                  <h2 class="capitalize text-sm ">{{ card.name }}</h2>
+               </div>
+               <span class="
+                  bg-opacity-75 
+                  absolute
+                  bg-gray-300
+                  hover:bg-pink-300 
+                  rounded-full
+                  top-0 
+                  right-0 
+                  "
+                  @click="removeFromBlankCard(index)">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red"
+                  class="h-6 w-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                   </svg>
+               </span>
+            </div> -->
+            <!-- Desktop View -->
+            <!-- <div class="hidden lg:block">
+               <img :src="card.image_location" :alt="card.name" class="object-cover w-auto xl:h-60 lg:h-32 mx-auto pb-6">
+               <div class="absolute w-full bg-gray-300 p-2 rounded shadow-lg text-center">
+                  <h2 class="uppercase xl:text-base lg:text-sm font-bold">{{ card.name }}</h2>
+               </div>
+               <span class="
+                  bg-opacity-75 
+                  absolute
+                  bg-gray-300
+                  hover:bg-pink-300 
+                  rounded-full
+                  top-0 
+                  right-0 
+                  "
+                  @click="removeFromBlankCard(index)">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red"
+                  class="h-6 w-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                   </svg>
+               </span>
+            </div> -->
+         </div>
+      </div>
+  </div>
+  <script>
+   const { createApp } = Vue;
+
+createApp({
+  data() {
+    return {
+      titans: [
+        {
+          "name": "tenebris",
+          "title": "incarnation of darkness",
+          "fights_at": "back",
+          "main_role": "marksman",
+          "additional_role": "support",
+          "super_titan": true,
+          "titan_class": "dark",
+          "image_location": "_img/titan/tenebris.png",
+          "avatar_location": "_img/avatar/tenebris.png"
+        },
+        {
+          "name": "mort",
+          "title": "all-consuming hunger",
+          "fights_at": "middle",
+          "main_role": "support",
+          "additional_role": "none",
+          "super_titan": false,
+          "titan_class": "dark",
+          "image_location": "_img/titan/mort.png",
+          "avatar_location": "_img/avatar/mort.png"
+        },
+        {
+          "name": "brustar",
+          "title": "master of shadows",
+          "fights_at": "front",
+          "main_role": "tank",
+          "additional_role": "none",
+          "super_titan": false,
+          "titan_class": "dark",
+          "image_location": "_img/titan/brustar.png",
+          "avatar_location": "_img/avatar/brustar.png"
+        },
+        {
+          "name": "rigel",
+          "title": "punishing hand",
+          "fights_at": "front",
+          "main_role": "tank",
+          "additional_role": "none",
+          "super_titan": false,
+          "titan_class": "light",
+          "image_location": "_img/titan/rigel.png",
+          "avatar_location": "_img/avatar/rigel.png"
+        },
+        {
+          "name": "solaris",
+          "title": "radiance of creation",
+          "fights_at": "back",
+          "main_role": "marksman",
+          "additional_role": "support",
+          "super_titan": true,
+          "titan_class": "light",
+          "image_location": "_img/titan/solaris.png",
+          "avatar_location": "_img/avatar/solaris.png"
+        }
+      ], // To store titan data
+      showTeamDialog: false, // To toggle team dialog modal
+      selectedTeam: [], // To store selected team
+      blankCards: [null, null, null, null, null], // Five empty cards
+      defeatResults: [], // To store defeat information after submit
+      winningTeam: [] // Store the winning team based on the logic
+    };
+  },
+  methods: {
+    // Open the team creation dialog
+    openTeamDialog() {
+      this.showTeamDialog = true;
+    },
+    // Close the team creation dialog
+    closeTeamDialog() {
+      this.showTeamDialog = false;
+      this.selectedTeam = [];
+    },
+    // Toggle selection of titans (limit to 5)
+    toggleSelection(titan) {
+      const index = this.selectedTeam.indexOf(titan);
+      if (index === -1) {
+        if (this.selectedTeam.length < 5) {
+          this.selectedTeam.push(titan);
+        } else {
+          // alert('You can only select up to 5 titans.');
+        }
+      } else {
+        this.selectedTeam.splice(index, 1); // Remove if already selected
+      }
+    },
+    // Confirm the selected team and display it in the cards
+    confirmTeam() {
+      if (this.selectedTeam.length === 5) {
+        this.blankCards = [...this.selectedTeam];
+        this.showTeamDialog = false;
+        this.calculateWinningTeam(); // Calculate the winning team after selecting
+      } else {
+        // alert("Please select exactly 5 titans.");
+      }
+    },
+    // Remove a titan from a specific card and unselect it
+    removeFromBlankCard(index) {
+      const removedTitan = this.blankCards[index];
+      if (removedTitan) {
+        // Remove the titan from the blankCards and unselect it
+        this.blankCards[index] = null;
+        const titanIndex = this.selectedTeam.indexOf(removedTitan);
+        if (titanIndex !== -1) {
+          this.selectedTeam.splice(titanIndex, 1); // Remove from selected team
+        }
+      }
+      this.openTeamDialog();
+    },
+    // Calculate the winning team based on whodefetewho.json data
+    calculateWinningTeam() {
+      fetch('data/whodefetewho.json')
+        .then(response => response.json())
+        .then(data => {
+          const allDefeatedTitans = [];
+          this.blankCards.forEach(titan => {
+            if (titan) {
+              const defeaters = data[titan.name] || [];
+              allDefeatedTitans.push(...defeaters);
+            }
+          });
+          // Find titans in blankCards that are not in the list of defeated titans
+          this.winningTeam = this.blankCards.filter(titan => titan && !allDefeatedTitans.includes(titan.name));
+        })
+        .catch(error => {
+          console.error("Error fetching who defeats who data:", error);
+        });
+    }
+  },
+  mounted() {
+    // Fetch the JSON data when the component is mounted
+    fetch('data/titan_list.json')
+      .then(response => response.json())
+      .then(data => {
+        this.titans = data;  // Store fetched data in 'titans'
+      });
+  }
+}).mount('#app');
+  </script>
+</body>
+</html>

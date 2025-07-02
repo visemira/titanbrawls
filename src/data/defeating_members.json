@@ -1,0 +1,101 @@
+[
+   { 
+      "member_id": 1, 
+      "defeated_by": [2, 11, 10]
+   },
+   { 
+      "member_id": 2, 
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 3, 
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 4, 
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 5, 
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 6,
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 7, 
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 8, 
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 9, 
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 10, 
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 11,
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 12, 
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 13, 
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 14, 
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 15, 
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 16, 
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 17,
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 18, 
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 19, 
+      "defeated_by": [2, 11, 10]
+
+   },
+   { 
+      "member_id": 20, 
+      "defeated_by": [2, 11, 10]
+
+   }
+ ]

@@ -1,0 +1,21 @@
+[
+   {
+     "id": 1,
+     "challenging_team_id": 1,
+     "team": [1, 5, 10, 11, 12],
+     "suggested_by": "Name1"
+   },
+   {
+     "id": 2,
+     "challenging_team_id": 1,
+     "team": [3, 2, 5, 12, 13],
+     "suggested_by": "Name2"
+   },
+   {
+     "id": 3,
+     "challenging_team_id": 2,
+     "team": [6, 7, 14, 15, 16],
+     "suggested_by": "Name3"
+   }
+ ]
+ 

@@ -1,0 +1,7 @@
+{
+   "tenebris": ["luminara", "aurelius"],
+   "keros": ["terra", "luminara"],
+   "luminara": ["tenebris"],
+   "terra": ["keros", "tenebris"],
+   "aurelius": ["keros", "tenebris"]
+ }

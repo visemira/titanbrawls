@@ -1,0 +1,114 @@
+Dark Titans:
+tenebris
+	Incarnation of Darkness
+	Fights at the back line
+	Main Role: Marksman
+	Additional Role: Support
+keros
+	The Twilight Eater
+	Fights at the middle line
+	Main role: Marksman
+	No Additional Role
+Mort
+	All-consuming Hunger
+	Fights at the middle line
+	Main role: Support
+	No Additional Role
+Brustar
+	Master of Shadows
+	Fights at the front line
+	Main role: Tank
+	No Additional Role
+
+Light Titans
+Amon
+	Crushing Light
+	Fight at the Middle Line
+	Main role: Marksman
+	No Additional Role
+Lyari
+	Beacon of Rebirth
+	Fights at the back line
+	Main role: Support
+	No Additional Role
+Rigel
+	Punishing Hand
+	Fights at the front line
+	Main role: Tank
+	No additional role
+Solaris
+	Radiance of Creation 
+	Fights at the back line
+	Main role: Marksman
+	Additional role: Support
+Water Titans
+Sigurd
+	Snow Guardian 
+	Fights at the front Line
+	Main role: Tank
+	Additional role: none
+Nova
+	Winter Blade
+	Fights at the middle line
+	Main role: Marksman
+	Addition role: none
+Mairi
+	Glacial Tide
+	Fights at the back line
+	Main role: Support
+	Additional role: none
+Hyperion
+	Father of the Ocean
+	Fights at the back line
+	Main role: Mage
+	Additional role: Support
+Fire Titans
+Araji
+	Master of Fire
+	Fights at the back line
+	Main role: Marksman
+	Additional role: Support
+Vulcan
+	Scorching Creater
+	Fights at the middle line
+	Main role: Marksman
+	Additional role: none
+	Super Titan: false
+Moloch
+	Blazing Ravager
+	Fights at the front line
+	Main role: Tank
+	Additional role: none
+	Super Titan: false
+Iginis
+	Punishing Flame
+	Fights at the back line
+	Main role: Support
+	Additional role: none
+	Super Titan: false
+
+Earth Titan
+Eden
+	Guardian of balance
+	Fights at the back line
+	Main Role: Marksman
+	Additional Role: Support
+	Super Titan: true
+Angus
+	Protector of Nature
+	Fights at the front line
+	Main role: tank
+	Additional role: none
+	Super Titan: false
+Sylva
+	Mother of Hunters
+	Fights at the back line
+	Main role: Marksman
+	Additional role: none
+	Super Titan: false
+Avalon
+	Soul of the Forest
+	Fights at the middle line
+	Main role: support
+	Additional role: none
+	Super titan: false

@@ -1,0 +1,223 @@
+[
+  {
+    "name": "tenebris",
+    "title": "incarnation of darkness",
+    "fights_at": "back",
+    "main_role": "marksman",
+    "additional_role": "support",
+    "super_titan": true,
+    "titan_class": "dark",
+    "image_location": "_img/titan/tenebris.png",
+    "avatar_location": "_img/avatar/tenebris.png"
+  },
+  {
+    "name": "keros",
+    "title": "the twilight eater",
+    "fights_at": "middle",
+    "main_role": "marksman",
+    "additional_role": "none",
+    "super_titan": false,
+    "titan_class": "dark",
+    "image_location": "_img/titan/keros.png",
+    "avatar_location": "_img/avatar/keros.png"
+  },
+  {
+    "name": "mort",
+    "title": "all-consuming hunger",
+    "fights_at": "middle",
+    "main_role": "support",
+    "additional_role": "none",
+    "super_titan": false,
+    "titan_class": "dark",
+    "image_location": "_img/titan/mort.png",
+    "avatar_location": "_img/avatar/mort.png"
+  },
+  {
+    "name": "brustar",
+    "title": "master of shadows",
+    "fights_at": "front",
+    "main_role": "tank",
+    "additional_role": "none",
+    "super_titan": false,
+    "titan_class": "dark",
+    "image_location": "_img/titan/brustar.png",
+    "avatar_location": "_img/avatar/brustar.png"
+  },
+  {
+    "name": "amon",
+    "title": "crushing light",
+    "fights_at": "middle",
+    "main_role": "marksman",
+    "additional_role": "none",
+    "super_titan": false,
+    "titan_class": "light",
+    "image_location": "_img/titan/amon.png",
+    "avatar_location": "_img/avatar/amon.png"
+  },
+  {
+    "name": "iyari",
+    "title": "beacon of rebirth",
+    "fights_at": "back",
+    "main_role": "support",
+    "additional_role": "none",
+    "super_titan": false,
+    "titan_class": "light",
+    "image_location": "_img/titan/iyari.png",
+    "avatar_location": "_img/avatar/iyari.png"
+  },
+  {
+    "name": "rigel",
+    "title": "punishing hand",
+    "fights_at": "front",
+    "main_role": "tank",
+    "additional_role": "none",
+    "super_titan": false,
+    "titan_class": "light",
+    "image_location": "_img/titan/rigel.png",
+    "avatar_location": "_img/avatar/rigel.png"
+  },
+  {
+    "name": "solaris",
+    "title": "radiance of creation",
+    "fights_at": "back",
+    "main_role": "marksman",
+    "additional_role": "support",
+    "super_titan": true,
+    "titan_class": "light",
+    "image_location": "_img/titan/solaris.png",
+    "avatar_location": "_img/avatar/solaris.png"
+  },
+  {
+    "name": "sigurd",
+    "title": "snow guardian",
+    "fights_at": "front",
+    "main_role": "tank",
+    "additional_role": "none",
+    "super_titan": false,
+    "titan_class": "water",
+    "image_location": "_img/titan/sigurd.png",
+    "avatar_location": "_img/avatar/sigurd.png"
+  },
+  {
+    "name": "nova",
+    "title": "winter blade",
+    "fights_at": "middle",
+    "main_role": "marksman",
+    "additional_role": "none",
+    "super_titan": false,
+    "titan_class": "water",
+    "image_location": "_img/titan/nova.png",
+    "avatar_location": "_img/avatar/nova.png"
+  },
+  {
+    "name": "mairi",
+    "title": "glacial tide",
+    "fights_at": "back",
+    "main_role": "support",
+    "additional_role": "none",
+    "super_titan": false,
+    "titan_class": "water",
+    "image_location": "_img/titan/mairi.png",
+    "avatar_location": "_img/avatar/mairi.png"
+  },
+  {
+    "name": "hyperion",
+    "title": "father of the ocean",
+    "fights_at": "back",
+    "main_role": "mage",
+    "additional_role": "support",
+    "super_titan": true,
+    "titan_class": "water",
+    "image_location": "_img/titan/hyperion.png",
+    "avatar_location": "_img/avatar/hyperion.png"
+  },
+  {
+    "name": "araji",
+    "title": "master of fire",
+    "fights_at": "back",
+    "main_role": "marksman",
+    "additional_role": "support",
+    "super_titan": true,
+    "titan_class": "fire",
+    "image_location": "_img/titan/araji.png",
+    "avatar_location": "_img/avatar/araji.png"
+  },
+  {
+    "name": "vulcan",
+    "title": "scorching creator",
+    "fights_at": "middle",
+    "main_role": "marksman",
+    "additional_role": "none",
+    "super_titan": false,
+    "titan_class": "fire",
+    "image_location": "_img/titan/vulcan.png",
+    "avatar_location": "_img/avatar/vulcan.png"
+  },
+  {
+    "name": "moloch",
+    "title": "blazing ravager",
+    "fights_at": "front",
+    "main_role": "tank",
+    "additional_role": "none",
+    "super_titan": false,
+    "titan_class": "fire",
+    "image_location": "_img/titan/moloch.png",
+    "avatar_location": "_img/avatar/moloch.png"
+  },
+  {
+    "name": "ignis",
+    "title": "punishing flame",
+    "fights_at": "back",
+    "main_role": "support",
+    "additional_role": "none",
+    "super_titan": false,
+    "titan_class": "fire",
+    "image_location": "_img/titan/ignis.png",
+    "avatar_location": "_img/avatar/ignis.png"
+  },
+  {
+    "name": "eden",
+    "title": "guardian of balance",
+    "fights_at": "back",
+    "main_role": "marksman",
+    "additional_role": "support",
+    "super_titan": true,
+    "titan_class": "earth",
+    "image_location": "_img/titan/eden.png",
+    "avatar_location": "_img/avatar/eden.png"
+  },
+  {
+    "name": "angus",
+    "title": "protector of nature",
+    "fights_at": "front",
+    "main_role": "tank",
+    "additional_role": "none",
+    "super_titan": false,
+    "titan_class": "earth",
+    "image_location": "_img/titan/angus.png",
+    "avatar_location": "_img/avatar/angus.png"
+  },
+  {
+    "name": "sylva",
+    "title": "mother of hunters",
+    "fights_at": "back",
+    "main_role": "marksman",
+    "additional_role": "none",
+    "super_titan": false,
+    "titan_class": "earth",
+    "image_location": "_img/titan/sylva.png",
+    "avatar_location": "_img/avatar/sylva.png"
+  },
+  {
+    "name": "avalon",
+    "title": "soul of the forest",
+    "fights_at": "middle",
+    "main_role": "support",
+    "additional_role": "none",
+    "super_titan": false,
+    "titan_class": "earth",
+    "image_location": "_img/titan/avalon.png",
+    "avatar_location": "_img/avatar/avalon.png"
+  }
+]
+
