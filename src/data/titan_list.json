@@ -7,8 +7,8 @@
     "additional_role": "support",
     "super_titan": true,
     "titan_class": "dark",
-    "image_location": "_img/titan/tenebris.png",
-    "avatar_location": "_img/avatar/tenebris.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/tenebris.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/tenebris.png"
   },
   {
     "name": "keros",
@@ -18,8 +18,8 @@
     "additional_role": "none",
     "super_titan": false,
     "titan_class": "dark",
-    "image_location": "_img/titan/keros.png",
-    "avatar_location": "_img/avatar/keros.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/keros.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/keros.png"
   },
   {
     "name": "mort",
@@ -29,8 +29,8 @@
     "additional_role": "none",
     "super_titan": false,
     "titan_class": "dark",
-    "image_location": "_img/titan/mort.png",
-    "avatar_location": "_img/avatar/mort.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/mort.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/mort.png"
   },
   {
     "name": "brustar",
@@ -40,8 +40,8 @@
     "additional_role": "none",
     "super_titan": false,
     "titan_class": "dark",
-    "image_location": "_img/titan/brustar.png",
-    "avatar_location": "_img/avatar/brustar.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/brustar.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/brustar.png"
   },
   {
     "name": "amon",
@@ -51,8 +51,8 @@
     "additional_role": "none",
     "super_titan": false,
     "titan_class": "light",
-    "image_location": "_img/titan/amon.png",
-    "avatar_location": "_img/avatar/amon.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/amon.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/amon.png"
   },
   {
     "name": "iyari",
@@ -62,8 +62,8 @@
     "additional_role": "none",
     "super_titan": false,
     "titan_class": "light",
-    "image_location": "_img/titan/iyari.png",
-    "avatar_location": "_img/avatar/iyari.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/iyari.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/iyari.png"
   },
   {
     "name": "rigel",
@@ -73,8 +73,8 @@
     "additional_role": "none",
     "super_titan": false,
     "titan_class": "light",
-    "image_location": "_img/titan/rigel.png",
-    "avatar_location": "_img/avatar/rigel.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/rigel.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/rigel.png"
   },
   {
     "name": "solaris",
@@ -84,8 +84,8 @@
     "additional_role": "support",
     "super_titan": true,
     "titan_class": "light",
-    "image_location": "_img/titan/solaris.png",
-    "avatar_location": "_img/avatar/solaris.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/solaris.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/solaris.png"
   },
   {
     "name": "sigurd",
@@ -95,8 +95,8 @@
     "additional_role": "none",
     "super_titan": false,
     "titan_class": "water",
-    "image_location": "_img/titan/sigurd.png",
-    "avatar_location": "_img/avatar/sigurd.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/sigurd.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/sigurd.png"
   },
   {
     "name": "nova",
@@ -106,8 +106,8 @@
     "additional_role": "none",
     "super_titan": false,
     "titan_class": "water",
-    "image_location": "_img/titan/nova.png",
-    "avatar_location": "_img/avatar/nova.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/nova.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/nova.png"
   },
   {
     "name": "mairi",
@@ -117,8 +117,8 @@
     "additional_role": "none",
     "super_titan": false,
     "titan_class": "water",
-    "image_location": "_img/titan/mairi.png",
-    "avatar_location": "_img/avatar/mairi.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/mairi.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/mairi.png"
   },
   {
     "name": "hyperion",
@@ -128,8 +128,8 @@
     "additional_role": "support",
     "super_titan": true,
     "titan_class": "water",
-    "image_location": "_img/titan/hyperion.png",
-    "avatar_location": "_img/avatar/hyperion.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/hyperion.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/hyperion.png"
   },
   {
     "name": "araji",
@@ -139,8 +139,8 @@
     "additional_role": "support",
     "super_titan": true,
     "titan_class": "fire",
-    "image_location": "_img/titan/araji.png",
-    "avatar_location": "_img/avatar/araji.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/araji.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/araji.png"
   },
   {
     "name": "vulcan",
@@ -150,8 +150,8 @@
     "additional_role": "none",
     "super_titan": false,
     "titan_class": "fire",
-    "image_location": "_img/titan/vulcan.png",
-    "avatar_location": "_img/avatar/vulcan.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/vulcan.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/vulcan.png"
   },
   {
     "name": "moloch",
@@ -161,8 +161,8 @@
     "additional_role": "none",
     "super_titan": false,
     "titan_class": "fire",
-    "image_location": "_img/titan/moloch.png",
-    "avatar_location": "_img/avatar/moloch.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/moloch.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/moloch.png"
   },
   {
     "name": "ignis",
@@ -172,8 +172,8 @@
     "additional_role": "none",
     "super_titan": false,
     "titan_class": "fire",
-    "image_location": "_img/titan/ignis.png",
-    "avatar_location": "_img/avatar/ignis.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/ignis.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/ignis.png"
   },
   {
     "name": "eden",
@@ -183,8 +183,8 @@
     "additional_role": "support",
     "super_titan": true,
     "titan_class": "earth",
-    "image_location": "_img/titan/eden.png",
-    "avatar_location": "_img/avatar/eden.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/eden.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/eden.png"
   },
   {
     "name": "angus",
@@ -194,8 +194,8 @@
     "additional_role": "none",
     "super_titan": false,
     "titan_class": "earth",
-    "image_location": "_img/titan/angus.png",
-    "avatar_location": "_img/avatar/angus.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/angus.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/angus.png"
   },
   {
     "name": "sylva",
@@ -205,8 +205,8 @@
     "additional_role": "none",
     "super_titan": false,
     "titan_class": "earth",
-    "image_location": "_img/titan/sylva.png",
-    "avatar_location": "_img/avatar/sylva.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/sylva.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/sylva.png"
   },
   {
     "name": "avalon",
@@ -216,8 +216,8 @@
     "additional_role": "none",
     "super_titan": false,
     "titan_class": "earth",
-    "image_location": "_img/titan/avalon.png",
-    "avatar_location": "_img/avatar/avalon.png"
+    "image_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/titan/avalon.png",
+    "avatar_location": "https://raw.githubusercontent.com/visemira/titanbrawls/refs/heads/main/src/_img/avatar/avalon.png"
   }
 ]
 

@@ -1,0 +1,16 @@
+{
+  "name": "titanbrawls",
+  "version": "1.0.0",
+  "description": "Hero War Titan Brawls where you could find how to defeat any tital team. this has nothing to do with power. Assumption all are max power and fully upgraded.",
+  "main": "index.js",
+  "scripts": {
+	  "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.11"
+  }
+}
